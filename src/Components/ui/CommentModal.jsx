@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import './ui.scss'
 import { useTranslations } from 'next-intl'
+import toast from 'react-hot-toast'
 
 const CommentModal = ({ onCommentSubmit }) => {
   const [name, setName] = useState('')
@@ -12,7 +13,7 @@ const CommentModal = ({ onCommentSubmit }) => {
 
   const handleCommentSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:3000/Comments', {
+      const response = await fetch('https://vercel-json-alpha.vercel.app/Comments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,7 +39,7 @@ const CommentModal = ({ onCommentSubmit }) => {
       setStar(1)
       setShowModal(false)
     } catch (error) {
-      console.error('Error submitting comment:', error)
+      toast.error('Error submitting comment:', error)
     }
   }
 
