@@ -7,6 +7,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { useEffect, useState } from 'react'
+import toast from 'react-hot-toast'
 
 //Merhaba hocam, slider için client tarafında kullanmam gerekti, nextjs fetching işlemlerini client tarafında yapamıyoruz bu yüzden mecburen böyle yaptım :(
 
@@ -20,7 +21,7 @@ const HappyCustomer = () => {
         setData(result)
       })
       .catch((err) => {
-        console.log(err)
+        toast.log(err)
       })
   }, [])
 
