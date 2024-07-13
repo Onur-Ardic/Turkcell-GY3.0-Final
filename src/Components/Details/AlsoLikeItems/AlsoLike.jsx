@@ -17,7 +17,7 @@ const AlsoLike = async () => {
         <div className="product-card" key={item.id}>
           <Link href={`/${locale}/details/alsolike/${item.id}`}>
             <div className="img">
-              <Image fill src={`/${item.img} `} alt={item.title} />
+              <Image fill src={`/${item.img}`} alt={item.title} />
             </div>
           </Link>
 

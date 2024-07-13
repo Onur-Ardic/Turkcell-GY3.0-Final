@@ -13,7 +13,7 @@ const ProductItemTopSelling = async () => {
         <div className="product-card">
           <Link href={`/${locale}/details/topSelling/${item.id}`}>
             <div className="img">
-              <Image fill src={`/${item.img} `} alt={item.title} />
+              <Image fill src={`/${item.img}`} alt={item.title} />
             </div>
           </Link>
 
